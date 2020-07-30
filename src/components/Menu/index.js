@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/img/Logo.png';
-import { LogoImage, MenuWrapper, ButtonLink } from './style';
+import { LogoImage, MenuWrapper } from './style';
+import  Button from '../Button';
 
 import './Menu.css';
 
@@ -14,9 +15,9 @@ function Menu() {
       <Link to="/" >
         <LogoImage className="Logo" src={Logo} alt="AluraFlix logo" />
       </Link>
-      <ButtonLink as={Link} className="ButtoLink" to="/cadastro/video">
+      <Button as={Link} className="ButtoLink" to="/cadastro/video">
         Novo vídeo
-      </ButtonLink>
+      </Button>
     </MenuWrapper>
   )
 }
