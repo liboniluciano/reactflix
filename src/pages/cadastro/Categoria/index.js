@@ -29,7 +29,9 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const url = 'http://localhost:8080/categorias';
+    const url = window.location.host.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://imeralura.herokuapp.com/categorias';
     fetch(url).then(async (response) => {
       const r = await response.json();
       setCategorias([
